@@ -3,9 +3,12 @@ import openai
 import os
 from chainlit.prompt import Prompt, PromptMessage
 from chainlit.playground.providers import ChatOpenAI
+from psw.key import Keys
 
 
-openai.api_key = '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'
+
+cls_key = Keys()
+openai.api_key = cls_key.openai_key
 
 # _input = 'Compute the number of customers who watched more than 50 minutes of video this month'
 # template = """SQL tables (and columns):
